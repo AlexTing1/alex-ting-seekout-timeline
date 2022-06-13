@@ -54,6 +54,36 @@ export default function App() {
               </div>
             );
           })}
+
+          {timelineMarkers.map((time, index) => (
+            <div>
+              <span
+                style={{
+                  backgroundColor: "black",
+                  border: "1px solid black",
+                  position: "absolute",
+                  top: -22,
+                  left: index * 250,
+                  right: 0,
+                  width: 0,
+                  height: 25,
+                  zIndex: 90
+                }}
+              />
+              <span
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: index * 250 - 16,
+                  right: 0,
+                  width: 0,
+                  marginTop: 7
+                }}
+              >
+                {time}{" "}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
